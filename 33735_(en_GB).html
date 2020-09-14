@@ -1,4 +1,4 @@
-ConnectWise Integration<endOfTitle><p>This article&nbsp;describes the steps of how to set billing/invoicing integration with the ConnectWise system.</p>
+<p>This article&nbsp;describes the steps of how to set billing/invoicing integration with the ConnectWise system.</p>
 <ul>
 <li><a href="#About ConnectWise Integration">About ConnectWise Integration</a></li>
 <li><a href="#ConnectWise Integration Set Up">ConnectWise Integration Set Up</a></li>
@@ -8,8 +8,9 @@ ConnectWise Integration<endOfTitle><p>This article&nbsp;describes the steps of h
 <li><a href="#Mapping">Step 3: Mapping</a></li>
 </ul>
 <li><a href="#ConnectWise Integration Managment">ConnectWise Integration Management</a></li>
+<li><a href="#ConnectWiseDisable">ConnectWise Integration Disabling</a></li>
 </ul>
-<h2><a id="About ConnectWise Integration"></a>About ConnectWise Integration</h2>
+<h2><a id="About ConnectWise Integration"></a><strong>About ConnectWise Integration</strong></h2>
 <p>ConnectWise is a business management&nbsp;and professions services automation (PSA) platform.&nbsp;</p>
 <p>The integration provides:</p>
 <ul>
@@ -19,9 +20,9 @@ ConnectWise Integration<endOfTitle><p>This article&nbsp;describes the steps of h
 <li>Automated daily data exports</li>
 <li>Ability to send regular end-user communication</li>
 </ul>
-<h2><a id="ConnectWise Integration Set Up"></a>ConnectWise Integration Set Up</h2>
+<h2><a id="ConnectWise Integration Set Up"></a><strong>ConnectWise Integration Set Up</strong></h2>
 <p>To start the integration: go to <em><a href="$ppurl" target="_blank">$pp</a>&nbsp;</em><span><em>&gt; Integration &gt; ConnectWise &gt; Get started with ConnectWise</em>. The system will start the ConnectWise integration wizard.</span></p>
-<h3><a id="Creds"></a>Step 1: Credentials</h3>
+<h3><a id="Creds"></a><strong>Step 1: Credentials</strong></h3>
 <ol>
 <li>Enter your ConnectWise <strong>Site</strong> and <strong>Company ID</strong> - credentials, that<span> are used to log <g class="gr_ gr_97 gr-alert gr_spell gr_run_anim ContextualSpelling" id="97" data-gr-id="97">in to</g> ConnectWise.</span></li>
 <li><span>Enter <strong>Public API key</strong> and <strong>Private API key&nbsp;</strong>of the API member. <br />To create these keys, open your ConnectWise, navigate to <em>System &gt; Members &gt; API Members</em>, &nbsp;click an API member or create a new one. Open API keys tab.</span></li>
@@ -33,38 +34,38 @@ ConnectWise Integration<endOfTitle><p>This article&nbsp;describes the steps of h
 <li>The private API key is only available at the time the key is created</li>
 <li>Your API member should have Admin Role ID for successful integration</li>
 </ul>
-<h3><a id="Settings"></a>Step 2: Settings</h3>
+<h3><a id="Settings"></a><strong>Step 2: Settings</strong></h3>
 <ol>
 <li>Select a&nbsp;radio button next to the appropriate type of export.</li>
 <li>Choose data for export:
 <ul>
-<li><strong>products (SKUs)</strong> - each resold SKU&nbsp;will be exported as ConnectWise products.&nbsp;<br />Appropriate ConnectWise agreements additions will be updated according to&nbsp;$onlyforubbegin transactions you can see on your Balance page.<br /> <img style="border: gray 1px solid;" src="Contents/33735/33735_5.png" alt="Balance" />$onlyforubend</li>
+<li><strong>products (SKUs)</strong> - each resold SKU&nbsp;will be exported as ConnectWise products.&nbsp;<br />Appropriate ConnectWise agreements additions will be updated according to$commentubbegin your customer account usage information.$commentubend&nbsp;$onlyforubbegin transactions you can see on your Balance page.<br /> <img style="border: gray 1px solid;" src="Contents/33735/33735_5.png" alt="Balance" />$onlyforubend</li>
 <li><strong>product quantity</strong> - quantities of resold SKUs <g class="gr_ gr_106 gr-alert gr_spell gr_run_anim ContextualSpelling ins-del" id="106" data-gr-id="106">in appropriate</g> ConnectWise agreements additions will be updated.&nbsp;</li>
 <li><strong>product cost</strong> - costs of resold products and costs in appropriate ConnectWise agreements additions will be updated. Cost is a price of SKU, which you pay to us. $onlyforubbegin You can see your cost on your Pricing Page<br /><img style="border: gray 1px solid;" src="Contents/33735/33735_6.png" alt="Pricing" /><br /><img style="border: gray 1px solid;" src="Contents/33735/33735_7.png" alt="BuyPrice" />&nbsp;$onlyforubend</li>
-<li><strong>product price (retail)</strong> - prices in &nbsp;ConnectWise agreements additions will be updated.<br />Retail price is a price of SKU, which your customer pays to you.&nbsp;&nbsp;<span>$onlyforubbegin</span><br /><img style="border: gray 1px solid;" src="Contents/33735/33735_8.png" alt="DefaultSell" />&nbsp;<span>$onlyforubend</span></li>
+<li><strong>product price (retail)</strong> - prices in &nbsp;ConnectWise agreements additions will be updated.<br />Retail price is a price of SKU, which your customer pays to you.&nbsp;$commentubbegin Prices will be taken from the Retail pricing page (<em>Partner Portal &gt; Products&amp;Pricing &gt; Retail pricing</em>) $commentubend&nbsp;<span>$onlyforubbegin</span><br /><img style="border: gray 1px solid;" src="Contents/33735/33735_8.png" alt="DefaultSell" />&nbsp;<span>$onlyforubend</span></li>
 <li><strong>list of users</strong> -&nbsp;<g class="gr_ gr_104 gr-alert gr_spell gr_run_anim ContextualSpelling ins-del multiReplace" id="104" data-gr-id="104">csv</g> file with account users and enabled services will be exported in the appropriate ConnectWise agreement.</li>
 </ul>
 </li>
 <li>Click <strong>Next</strong></li>
 </ol>
 <p><img style="border: gray 1px solid;" src="Contents/33735/33735_2.png" alt="ExportType" /></p>
-<p><strong>Note:</strong> if Daily auto export is enabled, the system will export data in ConnectWise every day automatically.</p>
-<h3><a id="Mapping"></a>Step 3: Mapping</h3>
+<p><strong>Note:</strong> if Daily/Monthly auto export is enabled, the system will export data in ConnectWise every day/month automatically.</p>
+<h3><strong><a id="Mapping"></a>Step 3: Mapping</strong></h3>
 <ol>
 <li>Map customer accounts to ConnectWise companies and agreements. You can export data in existing ConnectWise companies and agreements or create a new one.
-<p>Several customer accounts can be mapped to the same ConnectWise company and <strong>different</strong> agreements related with the company. If you map several customer accounts to the same ConnectWise company, you should create different agreements for each of the these accounts. Products and its quantities for different accounts are exported as the different additions (under different agreements). $onlyforubbegin For example, if account A has 3&nbsp;CONNECT licenses&nbsp;and account B has 4 CONNECT licenses and they are mapped to the same company &rarr; 1 addition "CONNECT licenses, quantity=3" and 1 addition "CONNECT licenses, quantity=4" will be created.$onlyforubend<br />Use <strong>Suggestions feature</strong> to help you to find relevant ConnectWise companies for each customer account. When you select the button, the system will show you the best match customer account names to ConnectWise company IDs. An icon will appear in any row containing auto-suggested companies.<br /><strong>Note:</strong> several end-user accounts can be mapped to the same ConnectWise company. Accounts can be mapped only to the different agreements.</p>
+<p>Several customer accounts can be mapped to the same ConnectWise company and different agreements related to the company. If you map several customer accounts to the same ConnectWise company, you should create different agreements for each of these accounts. Products and its quantities for different accounts are exported as the different additions (under different agreements).$commentubbegin For example, if account A has 3 mailboxes and account B has 4 mailboxes and they are mapped to the same company &rarr; 1 addition <em>Mailbox, quantity=3</em> and 1 addition M<em>ailbox, quantity=4</em> will be created.$commentubend$onlyforubbegin For example, if account A has 3&nbsp;CONNECT licenses&nbsp;and account B has 4 CONNECT licenses and they are mapped to the same company &rarr; 1 addition <em>CONNECT licenses, quantity=3</em> and 1 addition <em>CONNECT licenses, quantity=4</em> will be created.$onlyforubend<br />Use <strong>Suggestions feature</strong> to help you to find relevant ConnectWise companies for each customer account. When you select the button, the system will show you the best match customer account names to ConnectWise company IDs. An icon will appear in any row containing auto-suggested companies.<br /><strong>Note:</strong> several end-user accounts can be mapped to the same ConnectWise company. Accounts can be mapped only to the different agreements.</p>
 </li>
-<li>Select accounts you want to export. Only data of accounts with a check mark in the Export column will be exported in ConnectWise.</li>
+<li>Select accounts you want to export. Only data of accounts with a checkmark in the Export column will be exported in ConnectWise.</li>
 <li>Click <strong>Finish</strong>.</li>
 </ol>
 <p><img style="border: gray 1px solid;" src="Contents/33735/33735_3.png" alt="Mapping" /></p>
 <p><strong>Note:</strong>&nbsp;Suggestions feature&nbsp;does not work with mapped accounts.</p>
-<h2><a id="ConnectWise Integration Managment"></a>ConnectWise Integration Management</h2>
+<h2><a id="ConnectWise Integration Managment"></a><strong>ConnectWise Integration Management</strong></h2>
 <p>You can manage ConnectWise Integration by going to:&nbsp;<em><a href="$ppurl" target="_blank">$pp</a></em><em>&nbsp;&gt; Integration &gt; ConnectWise &gt; Export status.<br /></em></p>
 <ol>
 <li>The&nbsp;page contains the following information:
 <ul>
-<li>Next scheduled export information (if Daily auto export is enabled).</li>
+<li>Next scheduled export information (if Daily/Monthly auto export is enabled).</li>
 <li>Last export information (if export has ever been done): general export statistics and link to the detailed export log.</li>
 </ul>
 </li>
@@ -72,3 +73,10 @@ ConnectWise Integration<endOfTitle><p>This article&nbsp;describes the steps of h
 <li>You can change your account mapping settings. <br />To do so, click <strong>Account mapping</strong> tab. <br /><strong>Note</strong>: be careful with unmapping and remapping. All exported data can be deleted from ConnectWise only by you, not automatically.</li>
 <li>You can change your export settings. <br />To do so, open&nbsp;<strong>Settings</strong> tab. $onlyforubbegin<br /><img style="border: gray 1px solid;" src="Contents/33735/33735_9.png" alt="Settings" />$onlyforubend</li>
 </ol>
+<h2><a id="ConnectWiseDisable"></a><strong>ConnectWise Integration Disabling</strong></h2>
+<p>You can disable ConnectWise Integration by going to:&nbsp;<em><a href="$ppurl" target="_blank">$pp</a>&nbsp;&gt; Integration &gt; ConnectWise &gt; Settings</em>. Press <strong>Disable ConnectWise</strong> button in the right corner of the page.</p>
+<p><img style="border: gray 1px solid;" src="Contents/33735/33735_10.png" alt="Disable" /></p>
+<p>The warning will appear:</p>
+<p><em>Partner Portal will forget your ConnectWise credentails and export settings. To start export again you'd need to enter them up again.<br />All exported data won't be removed from ConnectWise.</em></p>
+<p><img style="border: gray 1px solid;" src="Contents/33735/33735_11.png" alt="Disable CW" /></p>
+<p>After confirming ConnectWise Integration will be disabled.</p>
