@@ -1,0 +1,424 @@
+Managing Hunt Groups On $unite<endOfTitle><p>A <strong>Hunt Group </strong>is an automated service that helps with handling multiple inbound calls to your organization. When callers dial&nbsp;one of the phone numbers that are assigned to a Hunt Group, or are directed to the group from an Auto Attendant or User, the calls are automatically distributed to a group of agents who are prepared to answer calls.</p>
+<p><strong>Agents </strong>are user accounts that are assigned to a Hunt Group. Each Hunt Group can have any number of agents, and agents can be in any number of Hunt Groups simultaneously. Agents cannot change their own Hunt Group membership or Hunt Group settings. <br /><br /><strong>Note: </strong>Always Forwarding and Busy Forwarding settings on the phones will not work properly with Simultaneous Hunt Groups. It's recommended to have them disabled.<br /><br />In order to participate as a Hunt Group agent, a user must:</p>
+<ul>
+<li><a href="$kbWebsite/viewKBArticle.asp?id=37060##create" target="_blank" rel="noopener">Have voice services enabled.</a></li>
+<li><a href="#agents">Be assigned to the Hunt Group as a member.</a></li>
+<li><a href="#liohg">Log in to the Hunt Group.</a></li>
+</ul>
+<p>&nbsp;In this article we will cover the following topics:</p>
+<ul>
+<li><a href="#create">Creating a Hunt Group</a></li>
+<li><a href="#manage">Managing the Hunt Group</a></li>
+<li><a href="#menu">Configuring Menu options</a></li>
+<li><a href="#greetings">Set up Greetings</a></li>
+<li>Managing Hunt Group Agents</li>
+<ul>
+<li><a href="#agents">Add/remove Agents</a></li>
+<li><a href="#liohg">Log In/Out of a Hunt Group</a></li>
+<li><a href="#receivecalls">Receiving calls as an agent</a></li>
+</ul>
+<li><a href="#Recordings">Managing Call Recordings</a></li>
+<li>Managing Voicemails</li>
+<ul>
+<li><a href="#VM settings">Voicemail Settings</a></li>
+<li><a href="#Check VMails">Checking Voicemails</a></li>
+</ul>
+<li><a href="#Reports">Managing Hunt Group Reports</a></li>
+</ul>
+<p><strong>Note:</strong> you can create one Auto Attendant and 10 Hunt Groups for your account as part of your plan. You may create additional Auto Attendants and Hunt Groups for an additional charge.</p>
+<h2><a id="create"></a>Creating a Hunt Group</h2>
+<ol>
+<li>Navigate to <em>Services &gt; $voiceservices &gt; </em><strong>Groups</strong>.</li>
+<li>Click the <strong>Create group</strong> button.<br /><br /><img style="border: gray 1px solid;" alt="" src="../Contents/36137/36137_1.png" /></li>
+<li>Enter the Hunt Group settings:
+<ul>
+<li><strong>Hunt Group Name:</strong> Choose an easily identifiable name for the group; for example, <em>Sales</em> or <em>Customer Service</em>.</li>
+<li><strong>Extension:</strong> Type 3-6 digit extension that is not assigned to a user or Hunt Group.</li>
+<li><strong><a id="voicemail"></a>Email for voicemail</strong>: email address where voicemails directed to hunt group's built-in voicemail box will be sent</li>
+<li><strong>Ringing Order: </strong>Select the way calls will be distributed among agents.
+<ul>
+<li><strong>Longest Idle:</strong> An incoming call goes to the agent who has not been on the phone for the longest period of time.</li>
+<li><strong>Round-Robin:</strong> Distributes the calls evenly by rotating the group member whose extension is tried first, then searching down the list in sequential order.</li>
+<li><strong>Ring-All:</strong> Sends the incoming call to all of the group members whose extensions are available for a call.</li>
+<li><strong>Sequential: </strong>Sends the call to the first free member of the list that is lowest on the list from top to bottom.<br /><br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click the<strong> Create </strong>button<br /><br /><img style="border: gray 1px solid;" alt="Create HG" src="../Contents/36137/36137_2.png" /></li>
+<li><strong>Confirm</strong> charges for this operation on the next pop-up.</li>
+</ol>
+<p><img alt="" src="../Contents/36137/36137_3.png" /></p>
+<h2><a id="manage"></a>Managing the Hunt Group</h2>
+<p>You can manage additional parameters of the Hunt Group that you have created.</p>
+<p><img style="border: 1px solid gray;" alt="Confirm creating HG" src="../Contents/36137/36137_4.png" /></p>
+<p><a id="general tab"></a>On the<strong> General Tab&nbsp;</strong>you can:</p>
+<ul>
+<li>Change the <strong>Name.</strong></li>
+<li>Change the <strong>Extension</strong></li>
+<li>Assign new or unassign <strong>Phone Numbers.</strong></li>
+<li>Change the<strong> Ringing Order </strong>for agents assigned to the group.</li>
+<li>CHange the <strong>Time zone</strong> for the Hunt Group.</li>
+<li>Change the <strong>Location</strong> for the Hunt Group.</li>
+</ul>
+<p><a id="callersagents"></a>Under <strong>Callers and Agents</strong>, you can adjust:</p>
+<ul>
+<li><strong>Max callers on hold</strong>: In case if this parameter exceeds the caller will hear a message, which you can choose. It can be custom, default or none.</li>
+<li><strong>Agent wrap-up time</strong>: The number of seconds an agent is considered "unavailable" after hanging up the phone. Calls will not be directed to the agent during this time. This allows the agent to make notes and prepare for the next call.</li>
+<li><strong>Hunt next agent after</strong>: The period of time after which the call will be directed to the next agent of the Hunt Group.</li>
+<li><strong>Unanswered idle time:</strong> The period of time an Agent will be temporarily removed from Hunt Group call routing if a call from the Hunt Group is not answered by the Agent.
+<ul>
+<li><strong>Timeout</strong> in seconds</li>
+<li><strong>Timeout to</strong> can forward calls to the following options:<strong>HG timeout:</strong> Specify if the call should be routed if there are no HG members available to answer the phone call. Check to enable. When enabled, you can edit <strong>Timeout</strong> and <strong>Move a call to</strong></li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 120px;"><strong>○ </strong>Phone Number. Specify the external phone number and timeout (how long this number will be ringing). If the call is not answered during the timeout period, it will be routed to Hunt group voicemail. <br /><strong>Note:</strong> if you set long timeout call may be 'picked up' by the voicemail of external number. Make a test call to confirm the routing is working as expected.&nbsp;<br />○ User<br />○ Auto Attendant<br />○ Hunt Group<br />○&nbsp;Voicemail: user<br />○&nbsp;Voicemail: current hunt group<br />○&nbsp;Voicemail box</p>
+<ul>
+<ul>
+<li><strong>Phone number timeout</strong> in seconds: the period of time the external phone you specified above will ring before the call will be routed to Hunt Group voicemail.<br /><strong>Note</strong>: this option will only appear if <strong>Timeout to</strong> section is set up to the external phone number.</li>
+</ul>
+</ul>
+<h2><a id="menu"></a>Menu Tab</h2>
+<p>Menu options provide a means to create alternate routing destinations for use in your Hunt Groups. These alternate destinations may be accessed at any time while interacting with the Hunt Group, such as while on hold before an agent answers the phone call.</p>
+<p>Click on the <strong>Action </strong>associated with the button and choose the destination.</p>
+<p><img style="border: 1px solid gray;" alt="HG routing" src="../Contents/36137/36137_5.png" /></p>
+<p><strong>Note:</strong> it is important that you mention these routing options in your Initial greeting, Repeating message and/or music on hold, as your customers will not be aware the options exist otherwise.</p>
+<h2><a id="greetings"></a>Greetings Tab</h2>
+<p>Greetings provide a method to relay information to your caller. You can set up multiple types of greetings that will play at different times during a phone call into your Hunt Group.</p>
+<p><img style="border: 1px solid gray;" alt="Greetings" src="../Contents/36137/call-flow.png" /></p>
+<p>The <strong>Call flow example </strong>explains when each of the greeting types will be played, during the lifecycle of an inbound phone call. Each location where a greeting can play in a call is denoted with an icon for quick reference.</p>
+<p>Types of greetings for the callers:</p>
+<p><img style="border: 1px solid gray;" alt="Call-flow" src="../Contents/36137/36137_01.png" /></p>
+<p>Types of greetings for the Hunt Group members:</p>
+<p><img style="border: 1px solid gray;" alt="Agent greetings" src="../Contents/36137/agent_Greetings.PNG" /></p>
+<p>For additional information on greeting audio file formatting, see <a href="$kbWebsite/viewKBArticle.asp?id=2065" target="_blank" rel="noopener">How do I create a *.WAV or *.OGG file for my greeting?</a></p>
+<p>There are following options for the section Music on hold/Ringing:</p>
+<ol>
+<li>Ringback tone.ogg (default US ringing sound) - always available for selection</li>
+<li>Use company selected MOH - selected by default</li>
+<li>Upload new file</li>
+</ol>
+<h2><a id="agents"></a>Agents Tab</h2>
+<p>In order to add agents to the Hunt Group:</p>
+<ul>
+<ul>
+<ol>
+<li>Click on <strong>Add new agent</strong></li>
+<li>Click the <strong>check mark</strong> next to the Users you would like to add.</li>
+<li>Click the <strong>Add</strong> button.<br /><br /><img style="border: gray 1px solid;" alt="Agents" src="../Contents/36137/36137_9.png" /></li>
+</ol>
+</ul>
+</ul>
+<p>You can also add external phone numbers to Hunt Group:</p>
+<ul>
+<ul>
+<ol>
+<li>Click <strong>Add phone number.</strong></li>
+<li>Enter<b> name </b>(optional).</li>
+<li>Enter the <strong>10 digit phone number</strong>.</li>
+<li>Click <strong>Add</strong>.<br /><br /><img style="border: gray 1px solid;" alt="Phone number" src="../Contents/36137/36137_10.png" /></li>
+</ol>
+</ul>
+</ul>
+<p><strong>Note: </strong>if you add a cell phone number or any number that has an answering service, you must remember to properly adjust the <strong>Timeout</strong> setting under <strong><a href="#callersagents">Callers and Agents</a> </strong>on the <strong>General </strong>tab.</p>
+<p><strong>Important:</strong> having the Hunt Group timeout longer than the answering service ring time will result in calls being picked up by the answering service before the next agent can receive the call!</p>
+<h3><a id="liohg"></a><strong>Logging In/Out of a Hunt Group</strong></h3>
+<p>Once Agents are added to the list, they are able to log into the group from their VoIP device by using the correct dial code, assigning log in &amp; out buttons to their device, or by an administrator using $cpanelname:</p>
+<h3>How to log in and out of hunt groups directly from your IP phone:</h3>
+<ul>
+<li>To log in the hunt group dial its extension and add '1'. <br />*XXX*1 (log into a hunt group with extension XXX).</li>
+<li>To log out of the hunt group dial its extension and add '0'.<br />*XXX*0 (log out of a hunt group with extension XXX).</li>
+</ul>
+<p>For example, if you need to log into a hunt group with extension 300, dial *300*1. To log out, dial *300*0.</p>
+<h3>How to log in and out of hunt groups in $cpanelname:<strong><br /></strong></h3>
+<p><img style="border: 1px solid gray;" alt="Log in/Log out" src="../Contents/36137/36137_13.png" /></p>
+<ul>
+<ul>
+<ul>
+<li>Click on <strong>Log in </strong>to make an agent available for calls in the HG.</li>
+<li>Click on&nbsp;<strong>Log out</strong> to make the agent temporarily unavailable for calls to this Hunt Group.</li>
+</ul>
+</ul>
+</ul>
+<h3>How to log in and out of hunt groups in $unite Desktop App:</h3>
+<p>$unite users who are assigned as an Agent in Hunt Group or $contactcenter $expressplan Group will receive an additional tab in $unite Application settings named <strong>Agent Settings</strong>. All agents will see the available groups there and will be able to log in or log out to the group.</p>
+<p><img id="__mcenew" alt="HG Login App" src="../Contents/36137/36137_HG.png" style="border: 1px solid gray;" /></p>
+<h3>How to assign log in &amp; out buttons to a $unite provisioned device:<strong><br /></strong></h3>
+<ul>
+<li>Navigate to the <strong>Devices</strong> tab and click the phone you wish to edit.</li>
+<li>Click the <strong>Line keys </strong>settings tab.</li>
+<li>Click <strong>Action</strong> next to chea button choice.</li>
+<li>Select <strong>Work with Hunt Groups.</strong></li>
+<li>Select the <strong>Action</strong>, either <strong>Hunt Group login </strong>or <strong>Hunt Group log out.</strong></li>
+<li>Select the <strong>Hunt Group </strong>the agent will log in our out of.</li>
+<li>Adjust the <strong>Display on phone</strong> to an identifying name that will show next to the button on the device.</li>
+</ul>
+<p>Make sure to also assign a log out button to another action button.</p>
+<p><span style="color: #800000;"><strong><img id="__mcenew" style="border: 1px solid gray;" alt="Log in/Log our buttons" src="../Contents/36137/36137_15.png" /></strong></span></p>
+<h3><a id="receivecalls"></a><strong>Receiving calls as an agent</strong></h3>
+<p>Once Agents are logged into the Group, any calls that are received will automatically begin ringing to their device in the order of the ring method chosen.</p>
+<p>When receiving calls from hunt groups, the Caller ID is modified to append the group name to the end of the Caller ID name (or 'CNAM') field on the display of your phone, to allow agents to quickly identify where callers are being referred from; this is very useful for agents that fill multiple roles and are in 2 or more groups.</p>
+<p>The $unite system accomplishes this by:</p>
+<ul>
+<li>Capturing the first <strong>10 characters</strong> from the caller's original Caller ID name. (example: CNAM:<strong>ACMEWarehouse</strong> = <strong>ACMEWareho</strong>)</li>
+<li>Capturing the first <strong>10 character</strong> from the Hunt Group the call was received on. (example: HG Name:<strong>CustomerSupport</strong> = <strong>CustomerSu</strong>)</li>
+<li>Add '<strong>,</strong>' between the entries</li>
+<li>Inbound Caller ID Display Result:<strong> ACMEWareho, CustomerSu 6503551212</strong></li>
+</ul>
+<h2>Voicemails Tabs</h2>
+<h3><strong><a id="VM settings"></a>Voicemail settings</strong></h3>
+<p>Voicemail settings tab provides the ability:</p>
+<ul>
+<li>To listen to and to upload the<strong> voicemail greetings</strong> for the Hunt Group.</li>
+<li>To reset the<strong> voicemail PIN</strong> for the current Hunt Group.</li>
+<li>To set up the <strong>Operator Number </strong>that allows a caller to touch <strong>0</strong> to reach a live person after being routed to this voicemail box. You can specify operator destination as an extension or a specific phone number.<br /><br /><img style="border: 1px solid gray;" alt="Operator number" src="../Contents/36137/36137_11.1.png" /></li>
+<li>To enable/disable <strong>auto-delete</strong> <strong>settings for voicemail</strong> as well as set up after how many days you would like your voicemails to be autodeleted.
+<ul>
+<li>Maximum storage for the voicemail is <strong>50 Mb</strong> regardless of the storage time.</li>
+<li>Voicemails can be stored for maximum <strong>365 days</strong>.</li>
+</ul>
+</li>
+<li>To enable/disable <strong>voicemail transcription</strong>.</li>
+<li>To adjust <strong>voicemail notification</strong> settings.</li>
+<li>To enable/disable <strong>SMS notifications</strong> for a specific number.</li>
+</ul>
+<p><img style="border: gray 1px solid;" alt="VM settings" src="../Contents/36137/36137_11.png" /></p>
+<p><strong>Note</strong>: you can forward the call directly to the hunt group's voicemail or reach hunt group's voicemail by using&nbsp;<strong>* + &lt;HG EXT&gt;&nbsp;</strong>(e.g:&nbsp;*100&nbsp;if 100 is the hunt group extension)</p>
+<h3><strong><a id="Check VMails"></a>Checking voicemails</strong></h3>
+<p>There are 3 available options to check voicemails:</p>
+<ol>
+<li><strong>In $cpanelname<br /></strong>Navigate to <em>Services &gt; $voiceservices &gt; Groups &gt; Select the hunt group &gt; </em><strong>Voicemails<em><br /><br /></em></strong><img style="border: gray 1px solid;" alt="Check VM" src="../Contents/36137/36137_12.png" /></li>
+<li><strong>Via Email<br /></strong>If the <a href="#notifications"> email notifications</a> are enabled, then all the voicemails should be forwarded to the specified email address.</li>
+<li><strong>From the remote line</strong><br />
+<ol>
+<li>To access hunt group voicemail directly dial ;<strong>* + &lt;HG EXT&gt; </strong>(e.g. *100&nbsp;if 100 is the hunt group extension) and press <strong>#</strong></li>
+<li>Enter <strong>HG EXT </strong>when prompted, press <strong>#</strong></li>
+<li>Enter <strong>HG VM PIN, </strong>press <strong>#<br /></strong></li>
+</ol>
+</li>
+<li style="list-style: none;">For more options of Voicemail management read the Knowledge Base article&nbsp;<a href="$kbWebsite/viewKBArticle.asp?id=2009" target="_blank" rel="noopener">How Can I Check My Voicemail?</a></li>
+</ol>
+<h2><a id="Recordings"></a>Call Recordings Tab</h2>
+<p>From this tab you can manage your recorded phone calls as well as set up notifications for it. You can search the call recordings by the number or agent&nbsp;as well as specify the search period.</p>
+<p><img style="border: gray 1px solid;" alt="Call recordings" src="../Contents/36137/36137_14.png" /></p>
+<p>You can enable/disable call recordings by clicking on <strong>Enable/Disable</strong></p>
+<p><strong>Notification via email </strong>allows you to add an email address for the call recordings notifications.</p>
+<p><strong>Note</strong>: audio player is not supported in Internet Explorer, but you may download recorded calls and listen to them.</p>
+<p>Call recording storage information:</p>
+<ul>
+<li>
+<p>Each Hunt Group will store up to 400Mb of call recordings; this equates to approximately 55 hours of recording time.</p>
+</li>
+<li>
+<p>A warning email will be sent to the customer when storage reaches 80%, 90% and 100% of capacity. Once capacity has been reached, older call recordings will not be overwritten, so the storage will need to be cleared out. Additionally, when capacity has been reached, and a new call is recorded, it will not be stored on the account, however, if the customer has the option enabled to email the call recording to themselves, they will still receive that email containing the call recording.</p>
+</li>
+<li>
+<p>Hunt Group recordings stay in your recording storage until you delete them.&nbsp; &nbsp;</p>
+</li>
+</ul>
+<h2><strong><a id="Reports"></a>Reports Tab<br /></strong></h2>
+<p>Reporting allows you to monitor various statistics for Hunt Groups and Agents.</p>
+<p><strong>Note: </strong>daily report information is stored for the last 3 months; monthly report information is stored for the last 3 years.</p>
+<p>To view the reports:</p>
+<ol>
+<li>Navigate to <em>Services &gt; $voiceservices &gt; </em><strong>Groups</strong></li>
+<li>Click on the Hunt Group name</li>
+<li>Click on<strong> Reports</strong>.</li>
+</ol>
+<p>Choose&nbsp;the date and the agent you wish to view the report for.</p>
+<p><img style="border: 1px solid gray;" src="../Contents/36137/12_hg_reports.png" width="100%" /></p>
+<p>You will see different reports depending on your selection.</p>
+<ul>
+<li>Date range - to view Historical call reports:<br />
+<ul>
+<li><a href="#da">All agents</a></li>
+<li><a href="#do">One agent</a></li>
+</ul>
+</li>
+<li>Today Monitoring - to view Active call reports:<br />
+<ul>
+<li><a href="#ta">All agents</a></li>
+<li><a href="#to">One agents</a></li>
+</ul>
+</li>
+</ul>
+<p><a id="da"></a>If you have selected a date range and all agents, you will see:</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Hunt Group Report</strong><strong>:</strong>
+<ul>
+<li>total number of calls</li>
+<li>number of immediately connected calls</li>
+<li>connected after hold</li>
+<li>abandoned calls</li>
+<li>calls failed due to max callers in queue</li>
+<li>average and max total call duration</li>
+<li>average and max hold time</li>
+<li>average and max talk time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_2.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Call Statistics&nbsp;Report</strong>:</p>
+<ul>
+<li>number of immediately connected calls</li>
+<li>connected after hold</li>
+<li>abandoned calls</li>
+<li>calls failed due to max callers in queue</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_3.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>On hold time Report</strong>:</p>
+<ul>
+<li>maximum on hold time</li>
+<li>the average on hold time</li>
+<li>calls with hold time within <a href="#SLA">the primary and secondary SLA if it's setup</a></li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_4.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Talk time Report</strong>:</p>
+<ul>
+<li>maximum talk time</li>
+<li>average talk time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_5.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Call length time Report:</strong></p>
+<ul>
+<li>maximum total call time</li>
+<li>average total call time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_6.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a id="do"></a>If you have selected a date range and one agent, you will see:</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>General Report</strong>:</p>
+<ul>
+<li>total calls</li>
+<li>rolled calls</li>
+<li>maximum time logged in</li>
+<li>maximum talk time</li>
+<li>average talk time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_7.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Calls Report:</strong></p>
+<ul>
+<li>total calls</li>
+<li>rolled calls</li>
+<li>calls per hour</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_8.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Talk time Report:</strong></p>
+<ul>
+<li>maximum talk time</li>
+<li>average talk time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_9.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Max time logged in Report</strong>:</p>
+<ul>
+<li>maximum time logged in</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_10.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a id="ta"></a>If you have selected today and all agents, you will see:</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Active calls Report</strong>:</p>
+<ul>
+<li>active calls</li>
+<li>calls on hold</li>
+<li>agents logged in</li>
+<li>agents on active calls</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_11.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Average call information Report</strong>:</p>
+<ul>
+<li>average call duration</li>
+<li>maximum call duration</li>
+<li>average time on hold</li>
+<li>maximum time on hold</li>
+<li>average talk time</li>
+<li>maximum talk time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_12.png" width="100%" /></td>
+</tr>
+<tr>
+<td>
+<p><strong>Agent logs Report</strong>:</p>
+<ul>
+<li>agent name</li>
+<li>last logged in time</li>
+<li>last logged out time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_13.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a id="to"></a>If you have selected today and one agent, you will see:</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>Active calls Report per agent:</p>
+<ul>
+<li>agent name</li>
+<li>last logged in time</li>
+<li>last logged out time</li>
+</ul>
+</td>
+<td width="50%"><img src="../Contents/21072/23542_14.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p><a id="SLA"></a>Additionaly, if you have selected a date range and all agents, you may customize the coloring of the graph by creating a Service Level Agreement (SLA). Once report is generated navigate to <strong>Hold time </strong>section and click <strong>Setup SLA</strong>.</p>
+<p><img id="__mcenew" alt="SLA setup" src="../Contents/36137/36137_16.png" /></p>
+<ul>
+<li>Enter the number of seconds from 20 up to 1200 you have committed to answer inbound calls within. This will be considered as SLA 1.</li>
+<li>The second service level (SLA 2) is automatically set at twice the first service level.</li>
+</ul>
+<p>&nbsp;</p>
